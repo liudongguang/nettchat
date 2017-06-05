@@ -9,6 +9,8 @@ import io.netty.handler.logging.LogLevel;
 import io.netty.handler.logging.LoggingHandler;
 
 public class MyWebSocketChatServer {
+   private static EventLoopGroup bossGroup =null;
+    private static EventLoopGroup workerGroup =null;
     public static void main(String[] args) throws Exception {
         startWebSocket();
     }
@@ -18,8 +20,8 @@ public class MyWebSocketChatServer {
      * @throws Exception
      */
     public static void startWebSocket() throws Exception{
-        EventLoopGroup bossGroup = new NioEventLoopGroup();
-        EventLoopGroup workerGroup = new NioEventLoopGroup();
+         bossGroup = new NioEventLoopGroup();
+         workerGroup = new NioEventLoopGroup();
         try {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             //handler方法主要是对bossGroup起作用，childHandler对workerGroup起作用,这里对bossGroup增加一个日志handler
@@ -30,5 +32,10 @@ public class MyWebSocketChatServer {
             bossGroup.shutdownGracefully();
             workerGroup.shutdownGracefully();
         }
+    }
+
+    public static void stopServer(){
+        bossGroup.shutdownGracefully();
+        workerGroup.shutdownGracefully();
     }
 }

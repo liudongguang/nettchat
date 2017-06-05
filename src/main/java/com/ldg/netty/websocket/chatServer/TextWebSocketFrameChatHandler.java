@@ -20,6 +20,10 @@ public class TextWebSocketFrameChatHandler extends SimpleChannelInboundHandler<T
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, TextWebSocketFrame msg) throws Exception {
         Channel channel = ctx.channel();
+        if("exit".equals(msg.text())){
+            System.out.println("222222");
+            ctx.close();
+        }
         channels.forEach(ch -> {
             String time = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME);
             if (ch != channel) {

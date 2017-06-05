@@ -18,7 +18,6 @@ public class SysInitialize implements ServletContextAware {
                 e.printStackTrace();
             }
         });
-        thread.setDaemon(true);
         thread.start();
     }
 }
