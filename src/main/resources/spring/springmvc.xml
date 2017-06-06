@@ -13,9 +13,6 @@
     <context:component-scan base-package="com.kangkang.controller,com.ldg.controller"></context:component-scan>
     <!-- 静态资源的解析，js,css,img... -->
     <mvc:resources location="/assets/" mapping="/assets/**"></mvc:resources>
-    <mvc:resources location="/lunboimgs/" mapping="/lunboimgs/**"></mvc:resources>
-    <mvc:resources location="/patientsHeadimgs/" mapping="/patientsHeadimgs/**"></mvc:resources>
-    <mvc:resources location="/zixunimgs/" mapping="/zixunimgs/**"></mvc:resources>
     <mvc:annotation-driven conversion-service="conversionService"
                            validator="validator">
         <mvc:message-converters>
@@ -73,56 +70,4 @@
             <value>5242880</value>
         </property>
     </bean>
-
-    <mvc:interceptors>
-        <!--患者端-->
-        <mvc:interceptor>
-            <mvc:mapping path="/appHandler/**"/>
-            <mvc:exclude-mapping path="/appHandler/getVerificationCode"/>
-            <mvc:exclude-mapping path="/appHandler/setPwd"/>
-            <mvc:exclude-mapping path="/appHandler/login"/>
-            <mvc:exclude-mapping path="/appHandler/forgetPwd"/>
-            <mvc:exclude-mapping path="/appHandler/resetPwd"/>
-            <mvc:exclude-mapping path="/appHandler/testRedis"/>
-            <mvc:exclude-mapping path="/appHandler/loginout"/>
-            <mvc:exclude-mapping path="/appHandler/isOrNoWxLogin"/>
-            <mvc:exclude-mapping path="/appHandler/wxLogin"/>
-            <!---->
-
-            <mvc:exclude-mapping path="/appHandler/disclaimer"/>
-            <mvc:exclude-mapping path="/appHandler/commonProblems"/>
-            <mvc:exclude-mapping path="/appHandler/commonProblemsDetails"/>
-            <mvc:exclude-mapping path="/appHandler/feedBack"/>
-            <mvc:exclude-mapping path="/appHandler/saveAppfeedback"/>
-            <bean class="com.kangkang.interceptor.ManagerLoginInterceptor"></bean>
-        </mvc:interceptor>
-        <!--医生端-->
-        <mvc:interceptor>
-            <mvc:mapping path="/appDoctorHandler/**"/>
-            <mvc:exclude-mapping path="/appDoctorHandler/login"/>
-            <mvc:exclude-mapping path="/appDoctorHandler/loginout"/>
-            <bean class="com.kangkang.interceptor.AppDoctorInterceptor"></bean>
-        </mvc:interceptor>
-        <!--网页端-->
-        <mvc:interceptor>
-            <mvc:mapping path="/webHandler/**"/>
-            <mvc:exclude-mapping path="/webHandler/weblogin"/>
-            <mvc:exclude-mapping path="/webHandler/dislunbo"/>
-            <bean class="com.kangkang.interceptor.WEBManagerLoginInterceptor"></bean>
-        </mvc:interceptor>
-        <mvc:interceptor>
-            <mvc:mapping path="/webDoctorHandler/**"/>
-            <bean class="com.kangkang.interceptor.WEBManagerLoginInterceptor"></bean>
-        </mvc:interceptor>
-
-        <mvc:interceptor>
-            <mvc:mapping path="/deviceHandler/**"/>
-            <bean class="com.kangkang.interceptor.WEBManagerLoginInterceptor"></bean>
-        </mvc:interceptor>
-        <mvc:interceptor>
-            <mvc:mapping path="/webPatientHandler/**"/>
-            <bean class="com.kangkang.interceptor.WEBManagerLoginInterceptor"></bean>
-        </mvc:interceptor>
-    </mvc:interceptors>
-
 </beans>

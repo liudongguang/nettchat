@@ -3,47 +3,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>客户端</title>
+    <base href="${pageContext.request.contextPath }/"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>客户端</title>
+    <link rel="stylesheet" href="assets/tether-1.3.3/css/tether.css"/>
+    <link rel="stylesheet" href="assets/bootstrap4/css/bootstrap.css"/>
 </head>
 <body>
-<script type="text/javascript">
-    var socket;
-    if (window.WebSocket) {
-        socket = new WebSocket("ws://localhost:8888/ws");
-        socket.onmessage = function (event) {//相当于服务器端的channelread0
-            var ta = document.getElementById("responseText");
-            ta.value = ta.value + "\n" + event.data;
-        }
-        socket.onopen = function (event) {
-            var ta = document.getElementById("responseText");
-            console.log(event);
-            ta.value = "连接开启！";
-        }
-        socket.onclose = function (event) {
-            var ta = document.getElementById("responseText");
-            ta.value = ta.value + "\n" + "连接关闭！";
-        }
-    } else {
-        alert("浏览器不支持WebSocket！");
-    }
-    function send(message) {
-        if(!window.WebSocket){
-            return;
-        }
-        if (socket.readyState == WebSocket.OPEN) {
-            socket.send(message);
-        } else {
-            alert("连接尚未开启！")
-        }
-    }
-</script>
-<form onsubmit="return false;">
-  <textarea name="message" style="width: 400px;height: 200px;"></textarea>
-  <input type="button" value="发送数据" onclick="send(this.form.message.value)"/>
-  <h3>服务端输出：</h3>
-  <textarea id="responseText" style="width: 400px;height: 300px;"></textarea>
-  <input type="button" value="清空内容" onclick="javascript:document.getElementById('responseText').value=''"/>
-</form>
+<div class="container">
+    <form onsubmit="return false;">
+        <div class="form-group">
+            <label for="responseText">聊天框</label>
+            <textarea class="form-control" id="responseText" rows="3" disabled="disabled"></textarea>
+            <input class="btn btn-outline-danger btn-sm" type="button" value="清空内容"
+                   onclick="javascript:document.getElementById('responseText').value=''"/>
+        </div>
+        <div class="form-group">
+            <label for="message">输入框</label>
+            <textarea class="form-control" name="message" id="message" rows="2"></textarea>
+            <input class="btn btn-outline-primary btn-sm" type="button" value="发送数据" onclick="send(this.form.message.value)"/>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/tether-1.3.3/js/tether.js"></script>
+<script type="text/javascript" src="assets/bootstrap4/js/bootstrap.js"></script>
+<script type="text/javascript" src="assets/js/index.js"></script>
 </body>
 </html>
