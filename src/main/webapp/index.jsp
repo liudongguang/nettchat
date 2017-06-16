@@ -10,13 +10,21 @@
     <title>首页</title>
     <link rel="stylesheet" href="assets/tether-1.3.3/css/tether.css"/>
     <link rel="stylesheet" href="assets/bootstrap4/css/bootstrap.css"/>
-    <link rel="stylesheet"
-          href="//i0.hdslb.com/bfs/activity-plat/activity4719/4719-activity.min.a7ba876aa8e5525c67e5.a7ba876aa8e5525c67e5.css"/>
+    <link rel="stylesheet" href="assets/css/index.css"/>
 </head>
 <body>
 <div id="container">
+    <div class="bml-topbar">
+        <div class="row">
+            <div class="col-md-5 col-sm-2 col-xs-2"><a href="test.jsp">聊天室</a></div>
+            <div class="col-md-5 col-sm-10" col-xs-10>欢迎光临</div>
+        </div>
+    </div>
     <div class="bml-world">
-        <video id="earthVideoID" src="assets/mp4/earth.mp4" preload="auto" loop="loop"  autoplay></video>
+        <video id="earthVideoID" src="assets/mp4/earth.mp4" preload="auto" loop="loop" autoplay style="object-fit:fill"
+               webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5"
+               x5-video-orientation="h5" x5-video-player-fullscreen="true"
+        ></video>
     </div>
 </div>
 <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
