@@ -22,10 +22,5 @@
 <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="assets/tether-1.3.3/js/tether.js"></script>
 <script type="text/javascript" src="assets/bootstrap4/js/bootstrap.js"></script>
-<script type="text/javascript">
-    $("#earthVideoID").click(function (e) {
-        return false;
-    });
-</script>
 </body>
 </html>
