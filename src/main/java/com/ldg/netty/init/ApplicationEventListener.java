@@ -13,7 +13,6 @@ public class ApplicationEventListener implements ApplicationListener {
     public void onApplicationEvent(ApplicationEvent event) {
         //容器关闭时触发的事件
         if(event instanceof ContextClosedEvent){
-            System.out.println("application close       1111111111111111111111111111111111111     ");
             MyWebSocketChatServer.stopServer();
         }
     }

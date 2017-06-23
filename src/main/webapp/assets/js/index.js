@@ -1,6 +1,6 @@
 var socket;
 if (window.WebSocket) {
-    socket = new WebSocket("ws://118.89.46.166:8888/ws");
+    socket = new WebSocket("ws://www.astelaya.cn:8888/ws");
     socket.onmessage = function (event) {//相当于服务器端的channelread0
         var ta = document.getElementById("responseText");
         ta.value = ta.value + "\n" + event.data;
@@ -24,7 +24,20 @@ function send(message) {
     }
     if (socket.readyState == WebSocket.OPEN) {
         if(message){
-            socket.send(message);
+            var ajaxOpt = {
+                paramurl: $("#basePath").val() + "chat/isValidateContent",
+                paramdata: {"text": message},
+                dataType: 'json',
+                callbackFun: function (data) {
+                    if(data.errcode!=-1){
+                        socket.send(message);
+                    }else{
+                        layer.alert("有非法字符！");
+                    }
+
+                }
+            };
+            ajaxRun(ajaxOpt);
         }else{
             alert("内容不能为空！")
         }

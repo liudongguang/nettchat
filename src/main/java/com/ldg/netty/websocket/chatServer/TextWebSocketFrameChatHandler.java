@@ -1,5 +1,7 @@
 package com.ldg.netty.websocket.chatServer;
 
+import com.ldg.api.constant.ChatSys;
+import com.ldg.api.util.minganci.MinganciUtil;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
@@ -10,6 +12,7 @@ import io.netty.util.concurrent.GlobalEventExecutor;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Set;
 
 /**
  * 泛型 I 表示处理的传递的类型
@@ -21,15 +24,21 @@ public class TextWebSocketFrameChatHandler extends SimpleChannelInboundHandler<T
     protected void channelRead0(ChannelHandlerContext ctx, TextWebSocketFrame msg) throws Exception {
         Channel channel = ctx.channel();
         if("exit".equals(msg.text())){
-            System.out.println("222222");
             ctx.close();
         }
         channels.forEach(ch -> {
             String time = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME);
+            String text=msg.text();
+
+            Set<String> mingganci=MinganciUtil.getMinganciSet(text);
+            System.out.println(text+"    "+mingganci);
+            if(mingganci!=null&&mingganci.size()>0){
+                text= ChatSys.xing;
+            }
             if (ch != channel) {
-                ch.writeAndFlush(new TextWebSocketFrame("其他人发送的消息" + time + "：\n" + msg.text()));
+                ch.writeAndFlush(new TextWebSocketFrame("其他人发送的消息" + time + "：\n" +text ));
             } else {
-                ch.writeAndFlush(new TextWebSocketFrame("[自己]" + time + "：\n" + msg.text()));
+                ch.writeAndFlush(new TextWebSocketFrame("[自己]" + time + "：\n" +text));
             }
         });
     }

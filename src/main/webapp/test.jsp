@@ -7,11 +7,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>客户端</title>
+
   <link rel="stylesheet" href="assets/tether-1.3.3/css/tether.css"/>
   <link rel="stylesheet" href="assets/bootstrap4/css/bootstrap.css"/>
 </head>
 <body>
 <div class="container">
+  <input type="hidden" id="basePath" value="${pageContext.request.contextPath }/"/>
   <form onsubmit="return false;">
     <div class="form-group">
       <label for="responseText">聊天框</label>
@@ -29,6 +31,8 @@
 <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="assets/tether-1.3.3/js/tether.js"></script>
 <script type="text/javascript" src="assets/bootstrap4/js/bootstrap.js"></script>
+<script language="javascript" type="text/javascript" src="assets/js/layer/layer.js"></script>
+<script language="javascript" type="text/javascript" src="assets/js/common.js"></script>
 <script type="text/javascript" src="assets/js/index.js"></script>
 </body>
 </html>
