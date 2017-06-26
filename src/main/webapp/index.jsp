@@ -5,11 +5,13 @@
 <head>
     <base href="${pageContext.request.contextPath }/"/>
     <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>首页</title>
     <link rel="stylesheet" href="assets/tether-1.3.3/css/tether.css"/>
     <link rel="stylesheet" href="assets/bootstrap4/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/bootstrap4/css/font-awesome.css"/>
     <link rel="stylesheet" href="assets/sefolio/css/owl.carousel.css">
     <link rel="stylesheet" href="assets/sefolio/css/owl.theme.css">
     <link rel="stylesheet" type="text/css" href="assets/sefolio/css/full-slider.css" media="all" />
@@ -43,18 +45,18 @@
 
 </div>
 
-
 <!--=========================
-    Start area for Menu
-============================== -->
+        Start area for Menu
+    ============================== -->
 <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
-    <img src="img/logo.png" alt="" />
+    <img src="assets/imges/logo.png" alt="" />
     <a href="#myCarousel">Home</a>
     <a href="#hireme_area">About me</a>
     <a href="#service_area">Services</a>
     <a href="#project_area">Portfolio</a>
     <a href="#contact_area">Hire me</a>
 </nav>
+
 
 <div class="manu_div toggle-menu menu-right push-body">
     <button class=""><i class="fa fa-indent"></i></button>
@@ -68,15 +70,6 @@
     Start area for Header
 ============================== -->
 <header id="myCarousel" class="carousel slide">
-
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-
-
     <!-- Wrapper for Slides -->
     <div class="carousel-inner">
 
@@ -87,15 +80,15 @@
                 <!-- Site logo -->
                 <div class="row header_top">
                     <div class="col-md-12 col-sm-12 col-xs-12 logo_div">
-                        <img src="img/logo.png" alt="" />
+                        <img src="assets/imges/logo.png" alt="" />
                     </div>
                 </div><!-- End Logo -->
 
                 <!-- Header About -->
                 <div class="row header_text">
                     <div class="col-md-6 col-sm-12 col-xs-12">
-                        <h1>Hello, I'm <span>Eftakher</span><br/>
-                            A <span>FrontEnd</span> designer</h1>
+                        <h1><br/>
+                          </h1>
                     </div>
                     <div class="col-md-6 "></div>
                 </div><!-- End Header About -->
@@ -103,31 +96,20 @@
                 <!-- Header promo -->
                 <div class="row header_promo">
                     <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="single_promo hvr-sweep-to-bottom">
-                            <i class="fa fa-mobile"></i>
-                            <h2>.UI/UX Design</h2>
-                            <a href="#">Read More</a>
-                        </div>
+                        <i class="fa fa-cog fa-spin fa-5x fa-fw"></i>
+                        任务分解
                     </div>
                     <div class="col-md-3  col-sm-3 col-xs-6">
-                        <div class="single_promo hvr-sweep-to-bottom">
-                            <i class="fa fa-desktop"></i>
-                            <h2>.UI/UX Design</h2>
-                            <a href="#">Read More</a>
-                        </div>
+                        <i class="fa fa-spinner fa-spin fa-5x fa-fw"></i>
+                        保持节奏
                     </div>
                     <div class="col-md-3  col-sm-3 col-xs-6">
-                        <div class="single_promo hvr-sweep-to-bottom">
-                            <i class="fa fa-lightbulb-o"></i>
-                            <h2>.UI/UX Design</h2><a href="#">Read More</a>
-                        </div>
+                        <i class="fa fa-internet-explorer  fa-5x fa-fw"></i>
+                        科学上网
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="single_promo hvr-sweep-to-bottom">
-                            <i class="fa fa-camera"></i>
-                            <h2>.UI/UX Design</h2>
-                            <a href="#">Read More</a>
-                        </div>
+                        <i class="fa fa-clock-o  fa-5x fa-fw"></i>
+                        不走弯路
                     </div>
                 </div><!-- End Header Ptomo -->
 
@@ -136,21 +118,21 @@
 
         <div class="item active">
             <!-- Set the first background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('img/slider/slide1.jpg');"></div>
+            <div class="fill" style="background-image:url('assets/sefolio/img/slider/slide1.jpg');"></div>
             <div class="carousel-caption overlay">
 
             </div>
         </div>
         <div class="item">
             <!-- Set the second background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('img/slider/slide2.jpg');"></div>
+            <div class="fill" style="background-image:url('assets/sefolio/img/slider/slide2.jpg');"></div>
             <div class="carousel-caption overlay">
 
             </div>
         </div>
         <div class="item">
             <!-- Set the third background image using inline CSS below. -->
-            <div class="fill" style="background-image:url('img/slider/slide3.jpg');"></div>
+            <div class="fill" style="background-image:url('assets/sefolio/img/slider/slide3.jpg');"></div>
             <div class="carousel-caption overlay">
 
             </div>
@@ -179,9 +161,9 @@
         <div class="col-md-6 col-sm-6 col-xs-12 hireme_slider  wow slideInRight">
             <div id="hireme_slide" class="owl-carousel owl-theme">
 
-                <div class="item"><img src="img/slider/hire_slide1.jpg" alt="The Last of us"></div>
-                <div class="item"><img src="img/slider/hire_slide2.jpg" alt="GTA V"></div>
-                <div class="item"><img src="img/slider/hire_slide3.jpg" alt="Mirror Edge"></div>
+                <div class="item"><img src="assets/sefolio/img/slider/hire_slide1.jpg" alt="The Last of us"></div>
+                <div class="item"><img src="assets/sefolio/img/slider/hire_slide2.jpg" alt="GTA V"></div>
+                <div class="item"><img src="assets/sefolio/img/slider/hire_slide3.jpg" alt="Mirror Edge"></div>
 
             </div>
 
@@ -258,18 +240,18 @@
             <div class="col-md-12">
                 <h3>Some awesome companies we've had the pleasure to work with</h3>
                 <div id="sponsor_slide" class="owl-carousel owl-theme">
-                    <div class="item"><img src="img/eivato.png" alt="" /></div>
-                    <div class="item"><img src="img/jquery.png" alt="" /></div>
-                    <div class="item"><img src="img/sass.png" alt="" /></div>
-                    <div class="item"><img src="img/less.png" alt="" /></div>
-                    <div class="item"><img src="img/jquery.png" alt="" /></div>
-                    <div class="item"><img src="img/eivato.png" alt="" /></div>
-                    <div class="item"><img src="img/eivato.png" alt="" /></div>
-                    <div class="item"><img src="img/jquery.png" alt="" /></div>
-                    <div class="item"><img src="img/sass.png" alt="" /></div>
-                    <div class="item"><img src="img/less.png" alt="" /></div>
-                    <div class="item"><img src="img/jquery.png" alt="" /></div>
-                    <div class="item"><img src="img/eivato.png" alt="" /></div>
+                    <div class="item"><img src="assets/sefolio/img/eivato.png" alt="" /></div>
+                    <div class="item"><img src="assets/sefolio/img/jquery.png" alt="" /></div>
+                    <div class="item"><img src="assets/sefolio/img/sass.png" alt="" /></div>
+                    <div class="item"><img src="assets/sefolio/img/less.png" alt="" /></div>
+                    <div class="item"><img src="assets/sefolio/img/jquery.png" alt="" /></div>
+                    <div class="item"><img src="assets/sefolio/img/eivato.png" alt="" /></div>
+                    <div class="item"><img src="assets/sefolio/img/eivato.png" alt="" /></div>
+                    <div class="item"><img src="assets/sefolio/img/jquery.png" alt="" /></div>
+                    <div class="item"><img src="assets/sefolio/img/sass.png" alt="" /></div>
+                    <div class="item"><img src="assets/sefolio/img/less.png" alt="" /></div>
+                    <div class="item"><img src="assets/sefolio/img/jquery.png" alt="" /></div>
+                    <div class="item"><img src="assets/sefolio/img/eivato.png" alt="" /></div>
                 </div>
             </div>
         </div>
@@ -297,9 +279,9 @@
             <!-- Start Sengle project -->
             <div class="col-md-4 col-sm-6 col-xs-12 single_project  wow fadeInLeft" data-wow-delay=".2s">
                 <div class="work_img">
-                    <img src="img/project/p1.jpg" alt="" />
+                    <img src="assets/sefolio/img/project/p1.jpg" alt="" />
                     <div class="project_overlay">
-                        <a class="fancybox button" href="img/project/p1-full.jpg" data-fancybox-group="gallery" >Full Project</a>
+                        <a class="fancybox button" href="assets/sefolio/img/project/p1-full.jpg" data-fancybox-group="gallery" >Full Project</a>
                     </div>
                 </div>
                 <h3>OneTitle Logo Branding</h3>
@@ -308,9 +290,9 @@
             <!-- Start Sengle project -->
             <div class="col-md-4 col-sm-6 col-xs-12 single_project  wow fadeInDown" data-wow-delay=".3s">
                 <div class="work_img">
-                    <img src="img/project/p2.jpg" alt="" />
+                    <img src="assets/sefolio/img/project/p2.jpg" alt="" />
                     <div class="project_overlay">
-                        <a class="fancybox button" href="img/project/p2-full.jpg" data-fancybox-group="gallery" >Full Project</a>
+                        <a class="fancybox button" href="assets/sefolio/img/project/p2-full.jpg" data-fancybox-group="gallery" >Full Project</a>
                     </div>
                 </div>
                 <h3>OneTitle Logo Branding</h3>
@@ -319,9 +301,9 @@
             <!-- Start Sengle project -->
             <div class="col-md-4 col-sm-6 col-xs-12 single_project  wow fadeInRight" data-wow-delay=".2s">
                 <div class="work_img">
-                    <img src="img/project/p3.jpg" alt="" />
+                    <img src="assets/sefolio/img/project/p3.jpg" alt="" />
                     <div class="project_overlay">
-                        <a class="fancybox button" href="img/project/p3-full.jpg" data-fancybox-group="gallery" >Full Project</a>
+                        <a class="fancybox button" href="assets/sefolio/img/project/p3-full.jpg" data-fancybox-group="gallery" >Full Project</a>
                     </div>
                 </div>
                 <h3>OneTitle Logo Branding</h3>
@@ -330,9 +312,9 @@
             <!-- Start Sengle project -->
             <div class="col-md-4 col-sm-6 col-xs-12 single_project  wow fadeInLeft" data-wow-delay=".2s">
                 <div class="work_img">
-                    <img src="img/project/p4.jpg" alt="" />
+                    <img src="assets/sefolio/img/project/p4.jpg" alt="" />
                     <div class="project_overlay">
-                        <a class="fancybox button" href="img/project/p4-full.jpg" data-fancybox-group="gallery" >Full Project</a>
+                        <a class="fancybox button" href="assets/sefolio/img/project/p4-full.jpg" data-fancybox-group="gallery" >Full Project</a>
                     </div>
                 </div>
                 <h3>OneTitle Logo Branding</h3>
@@ -341,9 +323,9 @@
             <!-- Start Sengle project -->
             <div class="col-md-4 col-sm-6 col-xs-12 single_project  wow fadeInUp" data-wow-delay=".3s">
                 <div class="work_img">
-                    <img src="img/project/p5.jpg" alt="" />
+                    <img src="assets/sefolio/img/project/p5.jpg" alt="" />
                     <div class="project_overlay">
-                        <a class="fancybox button" href="img/project/p5-full.jpg" data-fancybox-group="gallery" >Full Project</a>
+                        <a class="fancybox button" href="assets/sefolio/img/project/p5-full.jpg" data-fancybox-group="gallery" >Full Project</a>
                     </div>
                 </div>
                 <h3>OneTitle Logo Branding</h3>
@@ -352,9 +334,9 @@
             <!-- Start Sengle project -->
             <div class="col-md-4 col-sm-6 col-xs-12 single_project  wow fadeInRight" data-wow-delay=".2s">
                 <div class="work_img">
-                    <img src="img/project/p6.jpg" alt="" />
+                    <img src="assets/sefolio/img/project/p6.jpg" alt="" />
                     <div class="project_overlay">
-                        <a class="fancybox button" href="img/project/p6-full.jpg" data-fancybox-group="gallery" >Full Project</a>
+                        <a class="fancybox button" href="assets/sefolio/img/project/p6-full.jpg" data-fancybox-group="gallery" >Full Project</a>
                     </div>
                 </div>
                 <h3>OneTitle Logo Branding</h3>
@@ -484,7 +466,7 @@
 <footer  class="footer_area">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 text-center">
                 <p>&copy;  2017 <a href="http://astelaya.cn">ASTELAYA</a> 鲁ICP备17028071号-1</p>
             </div>
         </div>
