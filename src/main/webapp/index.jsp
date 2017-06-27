@@ -19,8 +19,9 @@
     <link rel="stylesheet" type="text/css" href="assets/sefolio/css/hover.css" media="all"/>
     <link rel="stylesheet" type="text/css" href="assets/sefolio/css/jquery.fancybox.css" media="all"/>
     <link rel="stylesheet" type="text/css" href="assets/sefolio/css/animate.css" media="all"/>
+    <!--
     <link rel="stylesheet" type="text/css" href="assets/sefolio/css/preload.css" media="all"/>
-
+    -->
     <!--=========================
         Favicon of this site
     ============================== -->
